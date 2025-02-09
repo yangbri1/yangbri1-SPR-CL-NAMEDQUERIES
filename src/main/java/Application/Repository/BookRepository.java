@@ -77,13 +77,30 @@ public interface BookRepository extends JpaRepository<Book, Long> {
      * TODO: Retrieve a book by its title. You may assume that titles are unique and that a single Book entity should
      * be returned, so the return type will be Book.
      */
+    
+    /* below code would yield an 'Abstract methods do not specify a body' because ...
+     * Java methods in an interface can NOT have a body unless the methods are default or static (local to this class) method.
+     * Note: This 'BookRepository.java' interface extends 'JpaRepository' --- 
+     * hence 'BookRepository' interface methods should only have method signatures w/o a body --- b/c Spring Data JPA repos auto generate query based on method name (Spring Data JPA infer query logic for you)
+     */
+    // public Book findBookByTitle(long title){
+    //     // Book book = new Book();
+    //     return findBookByIsbn(title);
+    // }
+    Book findBookByTitle(String title);
 
     /**
      * TODO: Retrieve books by their availability using the field "available" in the class Book. The return type will be List<Book>.
      */
+    
+    /* Similarly, only conjure up the method signature here --- 'BookRepository' interface extends JPARepository which automatically create query based off of method name */
+    // List<Book> findBooksByAvailability(boolean available);
+    
 
     /**
      * TODO: Retrieve books by their dateAdded OR their lastDateWithdrawn.
      */
 
+    /* Again! Let JPARepository do their inference */
+    // List<Book> findBooksByDateAddedOrLastDateWithdrawn(Timestamp dateAdded, Timestamp lastDateWithdrawn);
 }
