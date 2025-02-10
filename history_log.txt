@@ -1,0 +1,7 @@
+commit 74ff1ae2d66711891bca8c4913547027a9f3ef56
+Author: Brian Yang <yangbri1@msu.edu>
+Date:   Sun Feb 9 04:05:34 2025 +0000
+
+    Unsure why but when I include 'findBooksByAvailability()' & 'findBooksByDateAddedOrLastDateWithdrawn()' methods --- all of the test cases fails.
+
+ 2 files changed, 17 insertions(+)

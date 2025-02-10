@@ -95,6 +95,8 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     
     /* Similarly, only conjure up the method signature here --- 'BookRepository' interface extends JPARepository which automatically create query based off of method name */
     // List<Book> findBooksByAvailability(boolean available);
+    List<Book> findBooksByAvailable(boolean available);     // Note: Test case was NOT passing due to naming convention
+
     
 
     /**
@@ -102,5 +104,6 @@ public interface BookRepository extends JpaRepository<Book, Long> {
      */
 
     /* Again! Let JPARepository do their inference */
-    // List<Book> findBooksByDateAddedOrLastDateWithdrawn(Timestamp dateAdded, Timestamp lastDateWithdrawn);
+    List<Book> findBooksByDateAddedOrLastDateWithdrawn(Timestamp dateAdded, Timestamp lastDateWithdrawn);
+
 }
