@@ -1,7 +1,7 @@
-commit 74ff1ae2d66711891bca8c4913547027a9f3ef56
+commit 7a132b5710c12cdce6395e5c556bef7ece942f28
 Author: Brian Yang <yangbri1@msu.edu>
-Date:   Sun Feb 9 04:05:34 2025 +0000
+Date:   Mon Feb 10 17:20:44 2025 +0000
 
-    Unsure why but when I include 'findBooksByAvailability()' & 'findBooksByDateAddedOrLastDateWithdrawn()' methods --- all of the test cases fails.
+    .findBooksByAvailability() test case was NOT passing due to wrong naming convention --- changed method to 'findBooksByAvailable()'
 
- 2 files changed, 17 insertions(+)
+ 2 files changed, 11 insertions(+), 1 deletion(-)
